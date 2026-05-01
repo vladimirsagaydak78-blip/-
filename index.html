@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Владимир Сагайдак — Консалтинг в дистрибуции и ритейле</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0e0e0e;
+    --paper: #f5f2ed;
+    --cream: #ede8df;
+    --gold: #b8923a;
+    --gold-light: #d4aa5a;
+    --muted: #6b6560;
+    --line: rgba(14,14,14,0.12);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    padding: 1.4rem 5vw;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(245,242,237,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2.4rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+  }
+  .hero-left {
+    padding: 8vw 5vw 6vw 8vw;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+  }
+  .hero-left::after {
+    content: '';
+    position: absolute; right: 0; top: 15%; bottom: 15%;
+    width: 1px; background: var(--line);
+  }
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px; height: 1px;
+    background: var(--gold);
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 2rem;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 1rem;
+    color: var(--muted);
+    max-width: 420px;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.95rem 2rem;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.2s;
+    width: fit-content;
+  }
+  .btn-primary:hover { background: var(--gold); transform: translateY(-2px); }
+  .btn-primary svg { width: 16px; height: 16px; }
+
+  .hero-right {
+    background: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    padding: 6vw;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    width: 320px; height: 320px;
+    border: 1px solid rgba(184,146,58,0.2);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .hero-right::after {
+    content: '';
+    position: absolute;
+    width: 520px; height: 520px;
+    border: 1px solid rgba(184,146,58,0.1);
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    width: 100%;
+    max-width: 340px;
+    position: relative; z-index: 1;
+  }
+  .stat-card {
+    background: var(--paper);
+    padding: 2rem 1.6rem;
+    position: relative;
+  }
+  .stat-card:first-child { border-top-left-radius: 2px; }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .stat-num span { color: var(--gold); }
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 7rem 8vw; }
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px; height: 1px;
+    background: var(--gold);
+  }
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+  }
+  h2 em { font-style: italic; color: var(--gold); }
+  .section-intro {
+    color: var(--muted);
+    max-width: 560px;
+    margin-bottom: 4rem;
+  }
+
+  /* ── SERVICES ── */
+  #services { background: var(--ink); color: var(--paper); }
+  #services .section-label { color: var(--gold-light); }
+  #services .section-label::before { background: var(--gold-light); }
+  #services h2 { color: var(--paper); }
+  #services .section-intro { color: rgba(245,242,237,0.55); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .service-card {
+    background: var(--ink);
+    padding: 2.8rem 2.4rem;
+    position: relative;
+    transition: background 0.3s;
+    cursor: default;
+  }
+  .service-card:hover { background: #1a1a1a; }
+  .service-num {
+    font-family: var(--serif);
+    font-size: 4rem;
+    font-weight: 300;
+    color: rgba(184,146,58,0.18);
+    line-height: 1;
+    margin-bottom: 1.2rem;
+  }
+  .service-title {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--paper);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  .service-desc {
+    font-size: 0.85rem;
+    color: rgba(245,242,237,0.5);
+    line-height: 1.8;
+  }
+  .service-tag {
+    display: inline-block;
+    margin-top: 1.6rem;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(184,146,58,0.35);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+  }
+
+  /* ── CASES ── */
+  #cases { background: var(--cream); }
+  .cases-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+  .case-card {
+    background: var(--paper);
+    padding: 3rem 2.8rem;
+    border-top: 3px solid transparent;
+    transition: border-color 0.3s;
+    position: relative;
+  }
+  .case-card:hover { border-color: var(--gold); }
+  .case-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.4rem;
+    padding: 0.3rem 0.7rem;
+    background: rgba(184,146,58,0.1);
+    display: inline-block;
+  }
+  .case-title {
+    font-family: var(--serif);
+    font-size: 1.45rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  .case-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  .case-results {
+    display: flex; gap: 2rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1.6rem;
+  }
+  .case-metric {}
+  .case-metric-num {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    color: var(--gold);
+    font-weight: 600;
+    line-height: 1;
+  }
+  .case-metric-label {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── ABOUT ── */
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8vw;
+    align-items: start;
+  }
+  #about .left {}
+  #about .right { padding-top: 2rem; }
+
+  .expertise-list {
+    list-style: none;
+    margin-top: 2.5rem;
+  }
+  .expertise-list li {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.9rem;
+  }
+  .expertise-list li::before {
+    content: '—';
+    color: var(--gold);
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .about-quote {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--ink);
+    border-left: 2px solid var(--gold);
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .credentials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    margin-top: 2rem;
+  }
+  .cred-item {
+    background: var(--paper);
+    padding: 1.4rem 1.6rem;
+  }
+  .cred-num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: var(--gold);
+    font-weight: 600;
+    line-height: 1;
+  }
+  .cred-text {
+    font-size: 0.76rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+  }
+
+  /* ── CTA ── */
+  #contact {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 8rem 8vw;
+  }
+  #contact h2 { color: var(--paper); margin-bottom: 1.2rem; }
+  #contact .section-intro {
+    color: rgba(245,242,237,0.5);
+    margin: 0 auto 3rem;
+    max-width: 500px;
+  }
+  .cta-buttons {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+  }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: var(--paper);
+    padding: 0.95rem 2rem;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.25s, color 0.25s;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  .contact-details {
+    display: flex; justify-content: center; gap: 4rem;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 3rem;
+    flex-wrap: wrap;
+  }
+  .contact-item { text-align: center; }
+  .contact-item-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(245,242,237,0.35);
+    margin-bottom: 0.5rem;
+  }
+  .contact-item-val {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--paper);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080808;
+    padding: 2rem 8vw;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  footer span {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 48px; height: 1px;
+    background: var(--gold);
+    margin: 2.5rem 0;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-left > * {
+    animation: fadeUp 0.7s ease both;
+  }
+  .hero-left > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-left > *:nth-child(2) { animation-delay: 0.25s; }
+  .hero-left > *:nth-child(3) { animation-delay: 0.4s; }
+  .hero-left > *:nth-child(4) { animation-delay: 0.55s; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 6rem 6vw 3rem; }
+    .hero-left::after { display: none; }
+    .hero-right { padding: 3rem 6vw 5rem; min-height: 260px; }
+    .hero-stats { max-width: 100%; }
+
+    .services-grid { grid-template-columns: 1fr; }
+    .cases-grid { grid-template-columns: 1fr; }
+    #about { grid-template-columns: 1fr; }
+
+    nav .nav-links { display: none; }
+    section { padding: 4.5rem 6vw; }
+  }
+
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 2.4rem; }
+    .contact-details { gap: 2rem; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .case-results { gap: 1rem; }
+  }
+
+  /* scroll reveal */
+  .reveal {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">В. Сагайдак</a>
+  <ul class="nav-links">
+    <li><a href="#services">Услуги</a></li>
+    <li><a href="#cases">Кейсы</a></li>
+    <li><a href="#about">Об эксперте</a></li>
+    <li><a href="#contact">Контакт</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Консалтинг · Дистрибуция · Ритейл</div>
+    <h1>Рост продаж<br>без лишних<br><em>затрат</em></h1>
+    <p class="hero-sub">
+      Помогаю компаниям выстраивать систему продаж, оптимизировать
+      ассортимент и масштабировать дистрибуцию — на основе реальной юнит-экономики.
+    </p>
+    <a href="#contact" class="btn-primary">
+      Обсудить проект
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M3 8h10M9 4l4 4-4 4"/>
+      </svg>
+    </a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-num">12<span>+</span></div>
+        <div class="stat-label">лет в управлении продажами</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">3<span>x</span></div>
+        <div class="stat-label">средний рост выручки клиента</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">40<span>%</span></div>
+        <div class="stat-label">снижение неликвидного SKU</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">8<span>+</span></div>
+        <div class="stat-label">регионов выведено на прибыль</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">Услуги</div>
+  <h2>Что я делаю<br>для вашего <em>бизнеса</em></h2>
+  <p class="section-intro">
+    Фокус на трёх зонах: продажи, дистрибуция, ассортимент.
+    Без общих слов — только конкретные системы и измеримый результат.
+  </p>
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-title">Аудит и оптимизация продаж</div>
+      <p class="service-desc">
+        Анализирую воронку, каналы и конверсию. Нахожу узкие места и
+        выстраиваю процессы, которые дают рост без раздувания штата.
+      </p>
+      <span class="service-tag">Быстрый результат</span>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-title">Построение дистрибуционной сети</div>
+      <p class="service-desc">
+        Выбор дистрибьюторов, условия входа, KPI, контроль — создаю
+        структуру выхода в регионы и сети с нуля или реструктурирую существующую.
+      </p>
+      <span class="service-tag">Стратегия</span>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-title">Управление ассортиментом и маржой</div>
+      <p class="service-desc">
+        ABC/XYZ-анализ, отсечение неликвида, переговоры с поставщиками.
+        Результат — рост маржинальности без потери оборота.
+      </p>
+      <span class="service-tag">Операционно</span>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <div class="service-title">Выход в ритейл-сети</div>
+      <p class="service-desc">
+        Подготовка коммерческого предложения, переговоры, условия
+        листинга, работа с категорийными менеджерами — знаю процесс изнутри.
+      </p>
+      <span class="service-tag">Экспертиза сетей</span>
+    </div>
+    <div class="service-card">
+      <div class="service-num">05</div>
+      <div class="service-title">Юнит-экономика и P&L</div>
+      <p class="service-desc">
+        Строю модель юнит-экономики под конкретный канал. Показываю,
+        где бизнес зарабатывает, а где теряет — с цифрами.
+      </p>
+      <span class="service-tag">Аналитика</span>
+    </div>
+    <div class="service-card">
+      <div class="service-num">06</div>
+      <div class="service-title">Запуск регионов</div>
+      <p class="service-desc">
+        Стратегия приоритизации регионов, план запуска, найм
+        торговых представителей, маршрутизация и контроль выполнения.
+      </p>
+      <span class="service-tag">Масштаб</span>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section id="cases">
+  <div class="section-label">Кейсы</div>
+  <h2>Реальные<br><em>результаты</em></h2>
+  <p class="section-intro">
+    Примеры задач, с которыми приходят клиенты, и того, что происходит через 3–6 месяцев работы.
+  </p>
+  <div class="cases-grid reveal">
+    <div class="case-card">
+      <span class="case-tag">FMCG · Дистрибуция</span>
+      <h3 class="case-title">Перестройка дистрибуционной сети в 4 регионах</h3>
+      <p class="case-desc">
+        Производитель продуктов питания терял долю рынка из-за слабого покрытия.
+        Провёл аудит дистрибьюторов, заменил 3 из 7, перераспределил территории
+        и выстроил систему отчётности с еженедельным контролем.
+      </p>
+      <div class="case-results">
+        <div class="case-metric">
+          <div class="case-metric-num">+34%</div>
+          <div class="case-metric-label">рост продаж, 5 мес.</div>
+        </div>
+        <div class="case-metric">
+          <div class="case-metric-num">+22%</div>
+          <div class="case-metric-label">покрытие торговых точек</div>
+        </div>
+      </div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Ритейл · Ассортимент</span>
+      <h3 class="case-title">Оптимизация SKU и рост маржи в сети из 18 магазинов</h3>
+      <p class="case-desc">
+        Розничная сеть держала 1400 активных SKU с маржой ниже рынка.
+        Провёл ABC-анализ, сократил ассортимент до 900 позиций,
+        пересмотрел условия с ТОП-15 поставщиками.
+      </p>
+      <div class="case-results">
+        <div class="case-metric">
+          <div class="case-metric-num">+11%</div>
+          <div class="case-metric-label">рост маржинальности</div>
+        </div>
+        <div class="case-metric">
+          <div class="case-metric-num">−35%</div>
+          <div class="case-metric-label">неликвидный остаток</div>
+        </div>
+      </div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">B2B · Запуск региона</span>
+      <h3 class="case-title">Выход на рынок нового региона с нуля</h3>
+      <p class="case-desc">
+        Компания хотела зайти в новый регион без понимания потенциала.
+        Провёл анализ рынка, выбрал дистрибьютора, нанял 2 торговых
+        представителей и вывел регион на окупаемость за 4 месяца.
+      </p>
+      <div class="case-results">
+        <div class="case-metric">
+          <div class="case-metric-num">4 мес</div>
+          <div class="case-metric-label">до точки безубыточности</div>
+        </div>
+        <div class="case-metric">
+          <div class="case-metric-num">180+</div>
+          <div class="case-metric-label">активных точек в базе</div>
+        </div>
+      </div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">FMCG · Ритейл-сети</span>
+      <h3 class="case-title">Листинг в федеральную сеть и первые 3 месяца</h3>
+      <p class="case-desc">
+        Производитель заходил в сеть впервые. Подготовил коммерческое
+        предложение, провёл переговоры, разработал трейд-маркетинговый
+        план входа и сопровождал первые 12 недель полки.
+      </p>
+      <div class="case-results">
+        <div class="case-metric">
+          <div class="case-metric-num">×2.4</div>
+          <div class="case-metric-label">выручка vs план</div>
+        </div>
+        <div class="case-metric">
+          <div class="case-metric-num">0%</div>
+          <div class="case-metric-label">штрафов за сервис</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="left reveal">
+    <div class="section-label">Об эксперте</div>
+    <h2>Практик,<br>не <em>теоретик</em></h2>
+    <div class="divider"></div>
+    <ul class="expertise-list">
+      <li>COO / Коммерческий директор — управление всем циклом продаж</li>
+      <li>Построение дистрибуционных сетей в FMCG и смежных сегментах</li>
+      <li>Работа с федеральными и региональными ритейл-сетями</li>
+      <li>Управление SKU-матрицей и маржинальностью ассортимента</li>
+      <li>Анализ продаж, юнит-экономика, P&L на уровне канала</li>
+      <li>Запуск регионов: стратегия, команда, KPI, контроль</li>
+      <li>Переговоры с дистрибьюторами, сетями, поставщиками</li>
+      <li>Опыт в кризисном управлении и реструктуризации коммерческого блока</li>
+    </ul>
+  </div>
+  <div class="right reveal">
+    <div class="about-quote">
+      «Я не продаю консалтинг ради консалтинга. Мне важно, чтобы через полгода
+      ваша команда работала самостоятельно — с системой, которую мы создали вместе.»
+    </div>
+    <p style="color:var(--muted); font-size:0.9rem; line-height:1.8; margin-bottom:2rem;">
+      12 лет в управленческих позициях в дистрибуции и ритейле. Прошёл путь
+      от торгового представителя до COO. Знаю, как выглядит бизнес изнутри —
+      на уровне цифр, процессов и людей.
+    </p>
+    <div class="credentials-grid">
+      <div class="cred-item">
+        <div class="cred-num">12+</div>
+        <div class="cred-text">лет управленческого опыта</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-num">8</div>
+        <div class="cred-text">запущенных регионов</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-num">50+</div>
+        <div class="cred-text">переговоров с ритейл-сетями</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-num">3x</div>
+        <div class="cred-text">средний рост у клиентов</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+  <div class="section-label" style="justify-content:center; color:var(--gold-light);">
+    Начать работу
+  </div>
+  <h2>Готовы обсудить<br>ваш <em>проект?</em></h2>
+  <p class="section-intro">
+    Первая консультация — бесплатно. За 45 минут разберём вашу ситуацию
+    и определим, чем я могу помочь конкретно.
+  </p>
+  <div class="cta-buttons">
+    <a href="https://t.me/Vladimir_Sagaydak" class="btn-primary" target="_blank">
+      Написать в Telegram
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M3 8h10M9 4l4 4-4 4"/>
+      </svg>
+    </a>
+    <a href="mailto:vladimir.sagaydak78@gmail.com" class="btn-outline">
+      Написать на почту
+    </a>
+  </div>
+  <div class="contact-details">
+    <div class="contact-item">
+      <div class="contact-item-label">Telegram</div>
+      <div class="contact-item-val">@Vladimir_Sagaydak</div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-label">Email</div>
+      <div class="contact-item-val">vladimir.sagaydak78@gmail.com</div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-label">Формат работы</div>
+      <div class="contact-item-val">Онлайн / Офлайн</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 · Владимир Сагайдак · Консалтинг в дистрибуции и ритейле</span>
+  <span>Конфиденциальность данных гарантирована</span>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
