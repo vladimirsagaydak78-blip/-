@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Владимир Сагайдак — Консалтинг в дистрибуции и ритейле</title>
+<title>Володимир Сагайдак — Консалтинг у дистрибуції та рітейлі</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -20,9 +20,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--paper);
     color: var(--ink);
@@ -99,10 +97,7 @@
     letter-spacing: -0.01em;
     margin-bottom: 2rem;
   }
-  .hero h1 em {
-    font-style: italic;
-    color: var(--gold);
-  }
+  .hero h1 em { font-style: italic; color: var(--gold); }
   .hero-sub {
     font-size: 1rem;
     color: var(--muted);
@@ -162,9 +157,7 @@
   .stat-card {
     background: var(--paper);
     padding: 2rem 1.6rem;
-    position: relative;
   }
-  .stat-card:first-child { border-top-left-radius: 2px; }
   .stat-num {
     font-family: var(--serif);
     font-size: 3.2rem;
@@ -228,16 +221,17 @@
   .service-card {
     background: var(--ink);
     padding: 2.8rem 2.4rem;
-    position: relative;
     transition: background 0.3s;
     cursor: default;
   }
   .service-card:hover { background: #1a1a1a; }
+
+  /* ── НОМЕРИ БЛОКІВ — ЯСКРАВІШІ ── */
   .service-num {
     font-family: var(--serif);
-    font-size: 4rem;
-    font-weight: 300;
-    color: rgba(184,146,58,0.18);
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: rgba(184,146,58,0.55);
     line-height: 1;
     margin-bottom: 1.2rem;
   }
@@ -277,7 +271,6 @@
     padding: 3rem 2.8rem;
     border-top: 3px solid transparent;
     transition: border-color 0.3s;
-    position: relative;
   }
   .case-card:hover { border-color: var(--gold); }
   .case-tag {
@@ -308,7 +301,6 @@
     border-top: 1px solid var(--line);
     padding-top: 1.6rem;
   }
-  .case-metric {}
   .case-metric-num {
     font-family: var(--serif);
     font-size: 1.8rem;
@@ -320,7 +312,6 @@
     font-size: 0.72rem;
     color: var(--muted);
     margin-top: 0.25rem;
-    letter-spacing: 0.04em;
   }
 
   /* ── ABOUT ── */
@@ -330,13 +321,7 @@
     gap: 8vw;
     align-items: start;
   }
-  #about .left {}
-  #about .right { padding-top: 2rem; }
-
-  .expertise-list {
-    list-style: none;
-    margin-top: 2.5rem;
-  }
+  .expertise-list { list-style: none; margin-top: 2.5rem; }
   .expertise-list li {
     display: flex; align-items: flex-start; gap: 1rem;
     padding: 1.1rem 0;
@@ -351,7 +336,6 @@
     flex-shrink: 0;
     margin-top: 0.1rem;
   }
-
   .about-quote {
     font-family: var(--serif);
     font-size: 1.4rem;
@@ -363,7 +347,6 @@
     padding-left: 2rem;
     margin-bottom: 3rem;
   }
-
   .credentials-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -371,10 +354,7 @@
     background: var(--line);
     margin-top: 2rem;
   }
-  .cred-item {
-    background: var(--paper);
-    padding: 1.4rem 1.6rem;
-  }
+  .cred-item { background: var(--paper); padding: 1.4rem 1.6rem; }
   .cred-num {
     font-family: var(--serif);
     font-size: 2rem;
@@ -382,11 +362,7 @@
     font-weight: 600;
     line-height: 1;
   }
-  .cred-text {
-    font-size: 0.76rem;
-    color: var(--muted);
-    margin-top: 0.4rem;
-  }
+  .cred-text { font-size: 0.76rem; color: var(--muted); margin-top: 0.4rem; }
 
   /* ── CTA ── */
   #contact {
@@ -401,9 +377,7 @@
     margin: 0 auto 3rem;
     max-width: 500px;
   }
-  .cta-buttons {
-    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
-  }
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
   .btn-outline {
     display: inline-flex; align-items: center; gap: 0.6rem;
     border: 1px solid rgba(255,255,255,0.25);
@@ -417,7 +391,6 @@
     transition: border-color 0.25s, color 0.25s;
   }
   .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
-
   .contact-details {
     display: flex; justify-content: center; gap: 4rem;
     margin-top: 4rem;
@@ -433,11 +406,7 @@
     color: rgba(245,242,237,0.35);
     margin-bottom: 0.5rem;
   }
-  .contact-item-val {
-    font-family: var(--serif);
-    font-size: 1rem;
-    color: var(--paper);
-  }
+  .contact-item-val { font-family: var(--serif); font-size: 1rem; color: var(--paper); }
 
   /* ── FOOTER ── */
   footer {
@@ -446,27 +415,16 @@
     display: flex; justify-content: space-between; align-items: center;
     flex-wrap: wrap; gap: 1rem;
   }
-  footer span {
-    font-size: 0.72rem;
-    color: rgba(255,255,255,0.2);
-    letter-spacing: 0.06em;
-  }
+  footer span { font-size: 0.72rem; color: rgba(255,255,255,0.2); letter-spacing: 0.06em; }
 
-  /* ── DIVIDER ── */
-  .divider {
-    width: 48px; height: 1px;
-    background: var(--gold);
-    margin: 2.5rem 0;
-  }
+  .divider { width: 48px; height: 1px; background: var(--gold); margin: 2.5rem 0; }
 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(28px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-  .hero-left > * {
-    animation: fadeUp 0.7s ease both;
-  }
+  .hero-left > * { animation: fadeUp 0.7s ease both; }
   .hero-left > *:nth-child(1) { animation-delay: 0.1s; }
   .hero-left > *:nth-child(2) { animation-delay: 0.25s; }
   .hero-left > *:nth-child(3) { animation-delay: 0.4s; }
@@ -479,15 +437,12 @@
     .hero-left::after { display: none; }
     .hero-right { padding: 3rem 6vw 5rem; min-height: 260px; }
     .hero-stats { max-width: 100%; }
-
     .services-grid { grid-template-columns: 1fr; }
     .cases-grid { grid-template-columns: 1fr; }
     #about { grid-template-columns: 1fr; }
-
     nav .nav-links { display: none; }
     section { padding: 4.5rem 6vw; }
   }
-
   @media (max-width: 480px) {
     .hero h1 { font-size: 2.4rem; }
     .contact-details { gap: 2rem; }
@@ -495,11 +450,7 @@
     .case-results { gap: 1rem; }
   }
 
-  /* scroll reveal */
-  .reveal {
-    opacity: 0; transform: translateY(30px);
-    transition: opacity 0.65s ease, transform 0.65s ease;
-  }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.65s ease, transform 0.65s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
@@ -507,11 +458,11 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">В. Сагайдак</a>
+  <a href="#" class="nav-logo">Володимир Сагайдак</a>
   <ul class="nav-links">
-    <li><a href="#services">Услуги</a></li>
-    <li><a href="#cases">Кейсы</a></li>
-    <li><a href="#about">Об эксперте</a></li>
+    <li><a href="#services">Послуги</a></li>
+    <li><a href="#cases">Кейси</a></li>
+    <li><a href="#about">Про мене</a></li>
     <li><a href="#contact">Контакт</a></li>
   </ul>
 </nav>
@@ -519,14 +470,14 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <div class="hero-eyebrow">Консалтинг · Дистрибуция · Ритейл</div>
-    <h1>Рост продаж<br>без лишних<br><em>затрат</em></h1>
+    <div class="hero-eyebrow">Консалтинг · Дистрибуція · Рітейл</div>
+    <h1>Зростання продажів<br>без зайвих<br><em>витрат</em></h1>
     <p class="hero-sub">
-      Помогаю компаниям выстраивать систему продаж, оптимизировать
-      ассортимент и масштабировать дистрибуцию — на основе реальной юнит-экономики.
+      Допомагаю компаніям вибудовувати систему продажів, оптимізувати
+      асортимент та масштабувати дистрибуцію — на основі реальної юніт-економіки.
     </p>
     <a href="#contact" class="btn-primary">
-      Обсудить проект
+      Обговорити проєкт
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
         <path d="M3 8h10M9 4l4 4-4 4"/>
       </svg>
@@ -536,19 +487,19 @@
     <div class="hero-stats">
       <div class="stat-card">
         <div class="stat-num">12<span>+</span></div>
-        <div class="stat-label">лет в управлении продажами</div>
+        <div class="stat-label">років в управлінні продажами</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">3<span>x</span></div>
-        <div class="stat-label">средний рост выручки клиента</div>
+        <div class="stat-label">середнє зростання виручки клієнта</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">40<span>%</span></div>
-        <div class="stat-label">снижение неликвидного SKU</div>
+        <div class="stat-label">скорочення неліквідних SKU</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">8<span>+</span></div>
-        <div class="stat-label">регионов выведено на прибыль</div>
+        <div class="stat-label">регіонів виведено на прибуток</div>
       </div>
     </div>
   </div>
@@ -556,64 +507,64 @@
 
 <!-- SERVICES -->
 <section id="services">
-  <div class="section-label">Услуги</div>
-  <h2>Что я делаю<br>для вашего <em>бизнеса</em></h2>
+  <div class="section-label">Послуги</div>
+  <h2>Що я роблю<br>для вашого <em>бізнесу</em></h2>
   <p class="section-intro">
-    Фокус на трёх зонах: продажи, дистрибуция, ассортимент.
-    Без общих слов — только конкретные системы и измеримый результат.
+    Фокус на трьох зонах: продажі, дистрибуція, асортимент.
+    Без загальних слів — тільки конкретні системи та вимірюваний результат.
   </p>
   <div class="services-grid reveal">
     <div class="service-card">
       <div class="service-num">01</div>
-      <div class="service-title">Аудит и оптимизация продаж</div>
+      <div class="service-title">Аудит та оптимізація продажів</div>
       <p class="service-desc">
-        Анализирую воронку, каналы и конверсию. Нахожу узкие места и
-        выстраиваю процессы, которые дают рост без раздувания штата.
+        Аналізую воронку, канали та конверсію. Знаходжу вузькі місця і
+        вибудовую процеси, які дають зростання без збільшення штату.
       </p>
-      <span class="service-tag">Быстрый результат</span>
+      <span class="service-tag">Швидкий результат</span>
     </div>
     <div class="service-card">
       <div class="service-num">02</div>
-      <div class="service-title">Построение дистрибуционной сети</div>
+      <div class="service-title">Побудова дистрибуційної мережі</div>
       <p class="service-desc">
-        Выбор дистрибьюторов, условия входа, KPI, контроль — создаю
-        структуру выхода в регионы и сети с нуля или реструктурирую существующую.
+        Вибір дистрибʼюторів, умови входу, KPI, контроль — створюю
+        структуру виходу в регіони та мережі з нуля або реструктурую наявну.
       </p>
-      <span class="service-tag">Стратегия</span>
+      <span class="service-tag">Стратегія</span>
     </div>
     <div class="service-card">
       <div class="service-num">03</div>
-      <div class="service-title">Управление ассортиментом и маржой</div>
+      <div class="service-title">Управління асортиментом та маржею</div>
       <p class="service-desc">
-        ABC/XYZ-анализ, отсечение неликвида, переговоры с поставщиками.
-        Результат — рост маржинальности без потери оборота.
+        ABC/XYZ-аналіз, відсікання неліквіду, переговори з постачальниками.
+        Результат — зростання маржинальності без втрати обороту.
       </p>
-      <span class="service-tag">Операционно</span>
+      <span class="service-tag">Операційно</span>
     </div>
     <div class="service-card">
       <div class="service-num">04</div>
-      <div class="service-title">Выход в ритейл-сети</div>
+      <div class="service-title">Вихід у торговельні мережі</div>
       <p class="service-desc">
-        Подготовка коммерческого предложения, переговоры, условия
-        листинга, работа с категорийными менеджерами — знаю процесс изнутри.
+        Підготовка комерційної пропозиції, переговори, умови
+        лістингу, робота з категорійними менеджерами — знаю процес зсередини.
       </p>
-      <span class="service-tag">Экспертиза сетей</span>
+      <span class="service-tag">Експертиза мереж</span>
     </div>
     <div class="service-card">
       <div class="service-num">05</div>
-      <div class="service-title">Юнит-экономика и P&L</div>
+      <div class="service-title">Юніт-економіка та P&amp;L</div>
       <p class="service-desc">
-        Строю модель юнит-экономики под конкретный канал. Показываю,
-        где бизнес зарабатывает, а где теряет — с цифрами.
+        Будую модель юніт-економіки під конкретний канал. Показую,
+        де бізнес заробляє, а де втрачає — з цифрами.
       </p>
-      <span class="service-tag">Аналитика</span>
+      <span class="service-tag">Аналітика</span>
     </div>
     <div class="service-card">
       <div class="service-num">06</div>
-      <div class="service-title">Запуск регионов</div>
+      <div class="service-title">Запуск регіонів</div>
       <p class="service-desc">
-        Стратегия приоритизации регионов, план запуска, найм
-        торговых представителей, маршрутизация и контроль выполнения.
+        Стратегія пріоритизації регіонів, план запуску, найм
+        торгових представників, маршрутизація та контроль виконання.
       </p>
       <span class="service-tag">Масштаб</span>
     </div>
@@ -622,85 +573,85 @@
 
 <!-- CASES -->
 <section id="cases">
-  <div class="section-label">Кейсы</div>
-  <h2>Реальные<br><em>результаты</em></h2>
+  <div class="section-label">Кейси</div>
+  <h2>Реальні<br><em>результати</em></h2>
   <p class="section-intro">
-    Примеры задач, с которыми приходят клиенты, и того, что происходит через 3–6 месяцев работы.
+    Приклади задач, з якими приходять клієнти, і того, що відбувається через 3–6 місяців роботи.
   </p>
   <div class="cases-grid reveal">
     <div class="case-card">
-      <span class="case-tag">FMCG · Дистрибуция</span>
-      <h3 class="case-title">Перестройка дистрибуционной сети в 4 регионах</h3>
+      <span class="case-tag">FMCG · Дистрибуція</span>
+      <h3 class="case-title">Перебудова дистрибуційної мережі у 4 регіонах</h3>
       <p class="case-desc">
-        Производитель продуктов питания терял долю рынка из-за слабого покрытия.
-        Провёл аудит дистрибьюторов, заменил 3 из 7, перераспределил территории
-        и выстроил систему отчётности с еженедельным контролем.
+        Виробник продуктів харчування втрачав частку ринку через слабке покриття.
+        Провів аудит дистрибʼюторів, замінив 3 із 7, перерозподілив території
+        та вибудував систему звітності з щотижневим контролем.
       </p>
       <div class="case-results">
         <div class="case-metric">
           <div class="case-metric-num">+34%</div>
-          <div class="case-metric-label">рост продаж, 5 мес.</div>
+          <div class="case-metric-label">зростання продажів, 5 міс.</div>
         </div>
         <div class="case-metric">
           <div class="case-metric-num">+22%</div>
-          <div class="case-metric-label">покрытие торговых точек</div>
+          <div class="case-metric-label">покриття торгових точок</div>
         </div>
       </div>
     </div>
     <div class="case-card">
-      <span class="case-tag">Ритейл · Ассортимент</span>
-      <h3 class="case-title">Оптимизация SKU и рост маржи в сети из 18 магазинов</h3>
+      <span class="case-tag">Рітейл · Асортимент</span>
+      <h3 class="case-title">Оптимізація SKU та зростання маржі у мережі з 18 магазинів</h3>
       <p class="case-desc">
-        Розничная сеть держала 1400 активных SKU с маржой ниже рынка.
-        Провёл ABC-анализ, сократил ассортимент до 900 позиций,
-        пересмотрел условия с ТОП-15 поставщиками.
+        Роздрібна мережа тримала 1400 активних SKU з маржею нижче ринку.
+        Провів ABC-аналіз, скоротив асортимент до 900 позицій,
+        переглянув умови з ТОП-15 постачальниками.
       </p>
       <div class="case-results">
         <div class="case-metric">
           <div class="case-metric-num">+11%</div>
-          <div class="case-metric-label">рост маржинальности</div>
+          <div class="case-metric-label">зростання маржинальності</div>
         </div>
         <div class="case-metric">
           <div class="case-metric-num">−35%</div>
-          <div class="case-metric-label">неликвидный остаток</div>
+          <div class="case-metric-label">неліквідний залишок</div>
         </div>
       </div>
     </div>
     <div class="case-card">
-      <span class="case-tag">B2B · Запуск региона</span>
-      <h3 class="case-title">Выход на рынок нового региона с нуля</h3>
+      <span class="case-tag">B2B · Запуск регіону</span>
+      <h3 class="case-title">Вихід на ринок нового регіону з нуля</h3>
       <p class="case-desc">
-        Компания хотела зайти в новый регион без понимания потенциала.
-        Провёл анализ рынка, выбрал дистрибьютора, нанял 2 торговых
-        представителей и вывел регион на окупаемость за 4 месяца.
+        Компанія хотіла зайти в новий регіон без розуміння потенціалу.
+        Провів аналіз ринку, обрав дистрибʼютора, найняв 2 торгових
+        представників та вивів регіон на окупність за 4 місяці.
       </p>
       <div class="case-results">
         <div class="case-metric">
-          <div class="case-metric-num">4 мес</div>
-          <div class="case-metric-label">до точки безубыточности</div>
+          <div class="case-metric-num">4 міс</div>
+          <div class="case-metric-label">до точки беззбитковості</div>
         </div>
         <div class="case-metric">
           <div class="case-metric-num">180+</div>
-          <div class="case-metric-label">активных точек в базе</div>
+          <div class="case-metric-label">активних точок у базі</div>
         </div>
       </div>
     </div>
     <div class="case-card">
-      <span class="case-tag">FMCG · Ритейл-сети</span>
-      <h3 class="case-title">Листинг в федеральную сеть и первые 3 месяца</h3>
+      <span class="case-tag">FMCG · Торговельна мережа</span>
+      <h3 class="case-title">Лістинг у торговельну мережу та перші 3 місяці</h3>
       <p class="case-desc">
-        Производитель заходил в сеть впервые. Подготовил коммерческое
-        предложение, провёл переговоры, разработал трейд-маркетинговый
-        план входа и сопровождал первые 12 недель полки.
+        Виробник заходив у мережу вперше. Підготував комерційну
+        пропозицію, провів переговори, розробив трейд-маркетинговий
+        план входу та супроводжував перші 12 тижнів полиці.
       </p>
       <div class="case-results">
         <div class="case-metric">
           <div class="case-metric-num">×2.4</div>
-          <div class="case-metric-label">выручка vs план</div>
+          <div class="case-metric-label">виручка vs план</div>
         </div>
         <div class="case-metric">
           <div class="case-metric-num">0%</div>
-          <div class="case-metric-label">штрафов за сервис</div>
+          <div class="case-metric-label">штрафів за сервіс</div>
         </div>
       </div>
     </div>
@@ -710,46 +661,46 @@
 <!-- ABOUT -->
 <section id="about">
   <div class="left reveal">
-    <div class="section-label">Об эксперте</div>
+    <div class="section-label">Про мене</div>
     <h2>Практик,<br>не <em>теоретик</em></h2>
     <div class="divider"></div>
     <ul class="expertise-list">
-      <li>COO / Коммерческий директор — управление всем циклом продаж</li>
-      <li>Построение дистрибуционных сетей в FMCG и смежных сегментах</li>
-      <li>Работа с федеральными и региональными ритейл-сетями</li>
-      <li>Управление SKU-матрицей и маржинальностью ассортимента</li>
-      <li>Анализ продаж, юнит-экономика, P&L на уровне канала</li>
-      <li>Запуск регионов: стратегия, команда, KPI, контроль</li>
-      <li>Переговоры с дистрибьюторами, сетями, поставщиками</li>
-      <li>Опыт в кризисном управлении и реструктуризации коммерческого блока</li>
+      <li>COO / Комерційний директор — управління повним циклом продажів</li>
+      <li>Побудова дистрибуційних мереж у FMCG та суміжних сегментах</li>
+      <li>Робота з національними та регіональними рітейл-мережами</li>
+      <li>Управління SKU-матрицею та маржинальністю асортименту</li>
+      <li>Аналіз продажів, юніт-економіка, P&amp;L на рівні каналу</li>
+      <li>Запуск регіонів: стратегія, команда, KPI, контроль</li>
+      <li>Переговори з дистрибʼюторами, мережами, постачальниками</li>
+      <li>Досвід в антикризовому управлінні та реструктуризації комерційного блоку</li>
     </ul>
   </div>
   <div class="right reveal">
     <div class="about-quote">
-      «Я не продаю консалтинг ради консалтинга. Мне важно, чтобы через полгода
-      ваша команда работала самостоятельно — с системой, которую мы создали вместе.»
+      «Я не продаю консалтинг заради консалтингу. Мені важливо, щоб через пів року
+      ваша команда працювала самостійно — із системою, яку ми створили разом.»
     </div>
     <p style="color:var(--muted); font-size:0.9rem; line-height:1.8; margin-bottom:2rem;">
-      12 лет в управленческих позициях в дистрибуции и ритейле. Прошёл путь
-      от торгового представителя до COO. Знаю, как выглядит бизнес изнутри —
-      на уровне цифр, процессов и людей.
+      12 років на управлінських позиціях у дистрибуції та рітейлі. Пройшов шлях
+      від торгового представника до COO. Знаю, як виглядає бізнес зсередини —
+      на рівні цифр, процесів і людей.
     </p>
     <div class="credentials-grid">
       <div class="cred-item">
         <div class="cred-num">12+</div>
-        <div class="cred-text">лет управленческого опыта</div>
+        <div class="cred-text">років управлінського досвіду</div>
       </div>
       <div class="cred-item">
         <div class="cred-num">8</div>
-        <div class="cred-text">запущенных регионов</div>
+        <div class="cred-text">запущених регіонів</div>
       </div>
       <div class="cred-item">
         <div class="cred-num">50+</div>
-        <div class="cred-text">переговоров с ритейл-сетями</div>
+        <div class="cred-text">переговорів з торговими мережами</div>
       </div>
       <div class="cred-item">
         <div class="cred-num">3x</div>
-        <div class="cred-text">средний рост у клиентов</div>
+        <div class="cred-text">середнє зростання у клієнтів</div>
       </div>
     </div>
   </div>
@@ -758,22 +709,22 @@
 <!-- CTA -->
 <section id="contact">
   <div class="section-label" style="justify-content:center; color:var(--gold-light);">
-    Начать работу
+    Розпочати роботу
   </div>
-  <h2>Готовы обсудить<br>ваш <em>проект?</em></h2>
+  <h2>Готові обговорити<br>ваш <em>проєкт?</em></h2>
   <p class="section-intro">
-    Первая консультация — бесплатно. За 45 минут разберём вашу ситуацию
-    и определим, чем я могу помочь конкретно.
+    Перша консультація — безкоштовно. За 45 хвилин розберемо вашу ситуацію
+    та визначимо, чим я можу допомогти конкретно.
   </p>
   <div class="cta-buttons">
     <a href="https://t.me/Vladimir_Sagaydak" class="btn-primary" target="_blank">
-      Написать в Telegram
+      Написати в Telegram
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
         <path d="M3 8h10M9 4l4 4-4 4"/>
       </svg>
     </a>
     <a href="mailto:vladimir.sagaydak78@gmail.com" class="btn-outline">
-      Написать на почту
+      Написати на пошту
     </a>
   </div>
   <div class="contact-details">
@@ -786,19 +737,18 @@
       <div class="contact-item-val">vladimir.sagaydak78@gmail.com</div>
     </div>
     <div class="contact-item">
-      <div class="contact-item-label">Формат работы</div>
+      <div class="contact-item-label">Формат роботи</div>
       <div class="contact-item-val">Онлайн / Офлайн</div>
     </div>
   </div>
 </section>
 
 <footer>
-  <span>© 2026 · Владимир Сагайдак · Консалтинг в дистрибуции и ритейле</span>
-  <span>Конфиденциальность данных гарантирована</span>
+  <span>© 2026 · Володимир Сагайдак · Консалтинг у дистрибуції та рітейлі</span>
+  <span>Конфіденційність даних гарантовано</span>
 </footer>
 
 <script>
-  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
